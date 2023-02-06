@@ -4,8 +4,7 @@ import pickle
 import pandas as pd
 from fastai.vision.all import *
              
-
-
+	
 app = FastAPI()
 
 class ScoringItem(BaseModel):
@@ -13,7 +12,6 @@ class ScoringItem(BaseModel):
 
 
 @app.post('/')
-
 async def scoring_endpoint(item: ScoringItem):
 
 	df = pd.DataFrame([item.dict().values()], columns=item.dict().keys())
