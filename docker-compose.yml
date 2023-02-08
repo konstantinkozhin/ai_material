@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  classify:
+    container_name: classify
+    image: classify
+    build: .
+    ports: 
+      - '3000:3000'
